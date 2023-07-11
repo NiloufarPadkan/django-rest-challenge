@@ -14,5 +14,5 @@ class DeviceSerializer(Serializer):
             return value
         else:
             raise serializers.ValidationError(
-                "enter id in this format: /devices/id<pk>"
+                "enter id in this format: /devices/id<id>"
             )
