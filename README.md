@@ -33,7 +33,7 @@ aws configure
  AWS Access Key ID,
  AWS Secret Access Key, Default region name, Default output format(JSON)
 
-- If you don't have table, create a table named 'devices' and set attribute named id as primarykey
+- If you don't have table, create a table named 'devices' and set attribute named id(string) as primarykey
 
 #### 3- download python
 - [download and install python](https://www.python.org/downloads/) 
@@ -53,7 +53,7 @@ venv\Scripts\activate
 on linux
 
 ```
-. venv/bin/activate
+source  venv/bin/activate
 ```
 
     
@@ -63,16 +63,17 @@ This will install all the required packages for the Django project:
 ```bash
 pip install -r requirements.txt
 ```
-
+```bash
+python manage.py migrate   
+```
 
 
     
 ## Run Locally
 
 Start the server
-
 ```bash
-  python manage.py runserver 
+python manage.py runserver 
 ```
 
 
@@ -101,4 +102,40 @@ Destroying test database for alias 'default'...
 
 - import postman json file into your postman which is named as **DevicesApp.postman_collection.json** in root folder.
 
-now you have access to all existing APIs:
+  now you have access to all existing APIs:
+  <br>
+  <img src="https://github.com/NiloufarPadkan/django-rest-challenge/assets/50741400/ec62d143-7010-489a-90d2-bf0172320b25" width="300" />
+
+
+#### This is a list of APIs and their examples. for example store device has 3 example:
+- store Device (valid Request)
+- store Device (missed request parameters)
+- store Device (invalid id format)
+
+  and the response is saved in this examples.
+
+### example of store Device( valid request)
+<img src="https://github.com/NiloufarPadkan/django-rest-challenge/assets/50741400/35214cbb-9db0-4081-89ac-d2f4ca8e8d50" width="800" />
+
+### example of store Device( invalid request with missed parameters)
+
+<img src="https://github.com/NiloufarPadkan/django-rest-challenge/assets/50741400/a2d4e96a-e596-4b28-b5d5-5b0d07989e2d" width="800" />
+
+### example of store Device( invalid id format)
+
+<img src="https://github.com/NiloufarPadkan/django-rest-challenge/assets/50741400/8dc877e1-a290-4365-9ed3-8b69c87fb630" width="800" />
+
+### example of get a Device( existing device)
+
+<img src="https://github.com/NiloufarPadkan/django-rest-challenge/assets/50741400/bbe1c612-9c0d-44b0-9958-279c1cd73c09" width="800" />
+
+
+### example of get a Device(non  existing device)
+
+<img src="https://github.com/NiloufarPadkan/django-rest-challenge/assets/50741400/4de985b9-4913-4fb2-8fcf-13b34f8301df" width="800" />
+
+
+
+
+
+
