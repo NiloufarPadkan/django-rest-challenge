@@ -35,9 +35,9 @@ aws configure
 
 - If you don't have table, create a table named 'devices' and set attribute named id as primarykey
 
-#### 2- download python
+#### 3- download python
 - [download and install python](https://www.python.org/downloads/) 
-#### 3- Create a new virtual environment 
+#### 4- Create a new virtual environment 
 This will create a new virtual environment in a folder named `venv`.
 
 ```bash
@@ -57,7 +57,7 @@ on linux
 ```
 
     
-#### 4- install requirements
+#### 5- install requirements
 This will install all the required packages for the Django project:
 
 ```bash
@@ -96,3 +96,9 @@ Ran 5 tests in 3.376s
 OK
 Destroying test database for alias 'default'...
 ```
+
+## Postman
+
+- import postman json file into your postman which is named as **DevicesApp.postman_collection.json** in root folder.
+
+now you have access to all existing APIs:
