@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \r\n\"id\": \"/devices/id7\",\r\n\"deviceModel\": \"/devicemodels/id1\",\r\n\"name\": \"Sensor\",\r\n\"note\": \"Testing a sensor.\",\r\n\"serial\": \"A020000102\"\r\n\r\n}",
+					"raw": "{\r\n    \r\n\"id\": \"/devices/id2\",\r\n\"deviceModel\": \"/devicemodels/id2\",\r\n\"name\": \"Sensor\",\r\n\"note\": \"Testing a sensor.\",\r\n\"serial\": \"A020000102\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -278,7 +278,29 @@
 			"name": "show device",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/devices/:id",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"devices",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "id2"
+						}
+					]
+				}
 			},
 			"response": [
 				{
@@ -315,11 +337,11 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 12 Jul 2023 09:39:05 GMT"
+							"value": "Wed, 12 Jul 2023 11:22:06 GMT"
 						},
 						{
 							"key": "Server",
-							"value": "WSGIServer/0.2 CPython/3.10.6"
+							"value": "WSGIServer/0.2 CPython/3.11.4"
 						},
 						{
 							"key": "Content-Type",
@@ -331,7 +353,7 @@
 						},
 						{
 							"key": "Allow",
-							"value": "OPTIONS, GET"
+							"value": "GET, OPTIONS"
 						},
 						{
 							"key": "X-Frame-Options",
@@ -339,7 +361,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "522"
+							"value": "120"
 						},
 						{
 							"key": "X-Content-Type-Options",
@@ -355,7 +377,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"Item\": {\n        \"deviceModel\": \"/devicemodels/id2\",\n        \"note\": \"Testing a sensor.\",\n        \"id\": \"/devices/id2\",\n        \"name\": \"Sensor\",\n        \"serial\": \"A020000103\"\n    },\n    \"ResponseMetadata\": {\n        \"RequestId\": \"9VHCGUG62S5UU1SESFDQ4C5463VV4KQNSO5AEMVJF66Q9ASUAAJG\",\n        \"HTTPStatusCode\": 200,\n        \"HTTPHeaders\": {\n            \"server\": \"Server\",\n            \"date\": \"Wed, 12 Jul 2023 09:39:05 GMT\",\n            \"content-type\": \"application/x-amz-json-1.0\",\n            \"content-length\": \"159\",\n            \"connection\": \"keep-alive\",\n            \"x-amzn-requestid\": \"9VHCGUG62S5UU1SESFDQ4C5463VV4KQNSO5AEMVJF66Q9ASUAAJG\",\n            \"x-amz-crc32\": \"478088545\"\n        },\n        \"RetryAttempts\": 0\n    }\n}"
+					"body": "{\n    \"deviceModel\": \"/devicemodels/id2\",\n    \"note\": \"Testing a sensor.\",\n    \"id\": \"/devices/id2\",\n    \"name\": \"Sensor\",\n    \"serial\": \"A020000102\"\n}"
 				},
 				{
 					"name": "get non existing device",
@@ -486,7 +508,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 12 Jul 2023 09:59:22 GMT"
+							"value": "Wed, 12 Jul 2023 11:21:27 GMT"
 						},
 						{
 							"key": "Server",
@@ -502,7 +524,7 @@
 						},
 						{
 							"key": "Allow",
-							"value": "OPTIONS, GET"
+							"value": "GET, OPTIONS"
 						},
 						{
 							"key": "X-Frame-Options",
@@ -510,7 +532,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "676"
+							"value": "245"
 						},
 						{
 							"key": "X-Content-Type-Options",
@@ -526,7 +548,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"Items\": [\n        {\n            \"deviceModel\": \"/devicemodels/id5\",\n            \"note\": \"Testing a sensor5.\",\n            \"id\": \"/devices/id5\",\n            \"name\": \"Sensor5\",\n            \"serial\": \"A020000105\"\n        },\n        {\n            \"deviceModel\": \"/devicemodels/id2\",\n            \"note\": \"Testing a sensor.\",\n            \"id\": \"/devices/id2\",\n            \"name\": \"Sensor\",\n            \"serial\": \"A020000102\"\n        }\n    ],\n    \"Count\": 2,\n    \"ScannedCount\": 2,\n    \"ResponseMetadata\": {\n        \"RequestId\": \"0IEH9TE58APGV0DREF4S5BLOUJVV4KQNSO5AEMVJF66Q9ASUAAJG\",\n        \"HTTPStatusCode\": 200,\n        \"HTTPHeaders\": {\n            \"server\": \"Server\",\n            \"date\": \"Wed, 12 Jul 2023 09:59:22 GMT\",\n            \"content-type\": \"application/x-amz-json-1.0\",\n            \"content-length\": \"342\",\n            \"connection\": \"keep-alive\",\n            \"x-amzn-requestid\": \"0IEH9TE58APGV0DREF4S5BLOUJVV4KQNSO5AEMVJF66Q9ASUAAJG\",\n            \"x-amz-crc32\": \"1820926316\"\n        },\n        \"RetryAttempts\": 0\n    }\n}"
+					"body": "[\n    {\n        \"deviceModel\": \"/devicemodels/id5\",\n        \"note\": \"Testing a sensor5.\",\n        \"id\": \"/devices/id5\",\n        \"name\": \"Sensor5\",\n        \"serial\": \"A020000105\"\n    },\n    {\n        \"deviceModel\": \"/devicemodels/id2\",\n        \"note\": \"Testing a sensor.\",\n        \"id\": \"/devices/id2\",\n        \"name\": \"Sensor\",\n        \"serial\": \"A020000102\"\n    }\n]"
 				}
 			]
 		}

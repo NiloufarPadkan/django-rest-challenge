@@ -41,8 +41,8 @@ def store(request):
 @api_view(["GET"])
 def show(request, id):
     try:
-        device = table.get_item(Key={"id": f"/devices/id{id}"})
-        if device.get("Item") is not None:
+        device = table.get_item(Key={"id": f"/devices/id{id}"}).get("Item")
+        if device is not None:
             return Response(
                 device,
                 status=status.HTTP_200_OK,
@@ -62,7 +62,7 @@ def show(request, id):
 @api_view(["GET"])
 def index(request):
     try:
-        devices = table.scan()
+        devices = table.scan().get("Items")
         return Response(
             devices,
             status=status.HTTP_200_OK,
