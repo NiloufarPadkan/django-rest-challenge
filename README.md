@@ -53,7 +53,7 @@ venv\Scripts\activate
 on linux
 
 ```
-. venv/bin/activate
+source  venv/bin/activate
 ```
 
     
