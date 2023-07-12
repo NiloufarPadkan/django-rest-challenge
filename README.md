@@ -33,7 +33,7 @@ aws configure
  AWS Access Key ID,
  AWS Secret Access Key, Default region name, Default output format(JSON)
 
-- If you don't have table, create a table named 'devices' and set attribute named id as primarykey
+- If you don't have table, create a table named 'devices' and set attribute named id(string) as primarykey
 
 #### 3- download python
 - [download and install python](https://www.python.org/downloads/) 
@@ -72,7 +72,7 @@ pip install -r requirements.txt
 Start the server
 
 ```bash
-  python manage.py runserver 
+python manage.py runserver 
 ```
 
 
