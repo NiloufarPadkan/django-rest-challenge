@@ -43,9 +43,13 @@ def show(request, id):
     try:
         device = table.get_item(Key={"id": f"/devices/id{id}"})
         if device.get("Item") is not None:
-            return Response(device)
+            return Response(
+                device,
+                status=status.HTTP_200_OK,
+            )
         else:
             return Response(
+                {"error": "device Not Found"},
                 status=status.HTTP_404_NOT_FOUND,
             )
     except Exception as e:
