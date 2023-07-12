@@ -63,17 +63,15 @@ This will install all the required packages for the Django project:
 ```bash
 pip install -r requirements.txt
 ```
-
+```bash
+python manage.py migrate   
+```
 
 
     
 ## Run Locally
 
 Start the server
-
-```bas
-python manage.py migrate   
-```
 ```bash
 python manage.py runserver 
 ```
