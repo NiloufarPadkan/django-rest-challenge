@@ -20,6 +20,6 @@ from devices import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/devices", views.store),
-    path("api/devices/id<str:id>", views.show),
+    path("api/devices", views.store, name="device_store"),
+    path("api/devices/id<str:id>", views.show, name="device_show"),
 ]
