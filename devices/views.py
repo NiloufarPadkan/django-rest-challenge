@@ -57,3 +57,18 @@ def show(request, id):
             {"error", "something failed"},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
         )
+
+
+@api_view(["GET"])
+def index(request):
+    try:
+        devices = table.scan()
+        return Response(
+            devices,
+            status=status.HTTP_200_OK,
+        )
+    except Exception as e:
+        return Response(
+            {"error", "something failed"},
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+        )

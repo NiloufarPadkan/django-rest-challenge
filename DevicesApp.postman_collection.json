@@ -1,0 +1,537 @@
+{
+	"info": {
+		"_postman_id": "6de3f06d-309d-4620-8727-2188e0c59028",
+		"name": "DevicesApp Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12694267",
+		"_collection_link": "https://cloudy-space-244523.postman.co/workspace/shop-api~ffc69888-0529-4d4d-bf71-7941456a482a/collection/12694267-6de3f06d-309d-4620-8727-2188e0c59028?action=share&creator=12694267&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "store Device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n\"id\": \"/devices/id7\",\r\n\"deviceModel\": \"/devicemodels/id1\",\r\n\"name\": \"Sensor\",\r\n\"note\": \"Testing a sensor.\",\r\n\"serial\": \"A020000102\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/devices",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"devices"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "store Device (valid Request)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n\"id\": \"/devices/id7\",\r\n\"deviceModel\": \"/devicemodels/id7\",\r\n\"name\": \"Sensor\",\r\n\"note\": \"Testing a sensor.\",\r\n\"serial\": \"A020000102\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/devices",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"devices"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 12 Jul 2023 09:36:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "41"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Device created successfully\"\n}"
+				},
+				{
+					"name": "store Device (missed request parameters)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n\"id\": \"/devices/id7\",\r\n\"deviceModel\": \"/devicemodels/id7\",\r\n\"name\": \"Sensor\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/devices",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"devices"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 12 Jul 2023 09:36:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "73"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"note\": [\n        \"This field is required.\"\n    ],\n    \"serial\": [\n        \"This field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "store Device (invalid id format)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \r\n\"id\": \"id4\",\r\n\"deviceModel\": \"/devicemodels/id4\",\r\n\"name\": \"Sensor\",\r\n\"note\": \"Testing a sensor.\",\r\n\"serial\": \"A020000102\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/devices",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"devices"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 12 Jul 2023 09:37:14 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, POST"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": [\n        \"enter id in this format: /devices/id<id>\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "show device",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": [
+				{
+					"name": "get an existing device",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/devices/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"devices",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "id2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 12 Jul 2023 09:39:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "522"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Item\": {\n        \"deviceModel\": \"/devicemodels/id2\",\n        \"note\": \"Testing a sensor.\",\n        \"id\": \"/devices/id2\",\n        \"name\": \"Sensor\",\n        \"serial\": \"A020000103\"\n    },\n    \"ResponseMetadata\": {\n        \"RequestId\": \"9VHCGUG62S5UU1SESFDQ4C5463VV4KQNSO5AEMVJF66Q9ASUAAJG\",\n        \"HTTPStatusCode\": 200,\n        \"HTTPHeaders\": {\n            \"server\": \"Server\",\n            \"date\": \"Wed, 12 Jul 2023 09:39:05 GMT\",\n            \"content-type\": \"application/x-amz-json-1.0\",\n            \"content-length\": \"159\",\n            \"connection\": \"keep-alive\",\n            \"x-amzn-requestid\": \"9VHCGUG62S5UU1SESFDQ4C5463VV4KQNSO5AEMVJF66Q9ASUAAJG\",\n            \"x-amz-crc32\": \"478088545\"\n        },\n        \"RetryAttempts\": 0\n    }\n}"
+				},
+				{
+					"name": "get non existing device",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/devices/:id",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"devices",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "id10"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 12 Jul 2023 09:40:26 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.6"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "OPTIONS, GET"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"device Not Found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "index devices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/devices/index",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"devices",
+						"index"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "indexing devices",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/devices/index",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"devices",
+								"index"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 12 Jul 2023 09:48:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.11.4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "674"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"Items\": [\n        {\n            \"deviceModel\": \"/devicemodels/id1\",\n            \"note\": \"Testing a sensor.\",\n            \"id\": \"/devices/id1\",\n            \"name\": \"Sensor\",\n            \"serial\": \"A020000102\"\n        },\n        {\n            \"deviceModel\": \"/devicemodels/id2\",\n            \"note\": \"Testing a sensor.\",\n            \"id\": \"/devices/id2\",\n            \"name\": \"Sensor\",\n            \"serial\": \"A020000102\"\n        }\n    ],\n    \"Count\": 2,\n    \"ScannedCount\": 2,\n    \"ResponseMetadata\": {\n        \"RequestId\": \"PC0CAC4P5THO2E2872RLJOEU8JVV4KQNSO5AEMVJF66Q9ASUAAJG\",\n        \"HTTPStatusCode\": 200,\n        \"HTTPHeaders\": {\n            \"server\": \"Server\",\n            \"date\": \"Wed, 12 Jul 2023 09:48:49 GMT\",\n            \"content-type\": \"application/x-amz-json-1.0\",\n            \"content-length\": \"340\",\n            \"connection\": \"keep-alive\",\n            \"x-amzn-requestid\": \"PC0CAC4P5THO2E2872RLJOEU8JVV4KQNSO5AEMVJF66Q9ASUAAJG\",\n            \"x-amz-crc32\": \"1428308170\"\n        },\n        \"RetryAttempts\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}
