@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "6de3f06d-309d-4620-8727-2188e0c59028",
-		"name": "DevicesApp Copy",
+		"_postman_id": "4e377978-2a5b-4652-a803-eb78874ac3ee",
+		"name": "DevicesApp",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "12694267",
-		"_collection_link": "https://cloudy-space-244523.postman.co/workspace/shop-api~ffc69888-0529-4d4d-bf71-7941456a482a/collection/12694267-6de3f06d-309d-4620-8727-2188e0c59028?action=share&creator=12694267&source=collection_link"
+		"_collection_link": "https://cloudy-space-244523.postman.co/workspace/shop-api~ffc69888-0529-4d4d-bf71-7941456a482a/collection/12694267-4e377978-2a5b-4652-a803-eb78874ac3ee?action=share&creator=12694267&source=collection_link"
 	},
 	"item": [
 		{
@@ -278,10 +278,7 @@
 			"name": "show device",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": ""
-				}
+				"header": []
 			},
 			"response": [
 				{
@@ -462,7 +459,7 @@
 			},
 			"response": [
 				{
-					"name": "indexing devices",
+					"name": "index devices",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
@@ -489,7 +486,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 12 Jul 2023 09:48:49 GMT"
+							"value": "Wed, 12 Jul 2023 09:59:22 GMT"
 						},
 						{
 							"key": "Server",
@@ -505,7 +502,7 @@
 						},
 						{
 							"key": "Allow",
-							"value": "GET, OPTIONS"
+							"value": "OPTIONS, GET"
 						},
 						{
 							"key": "X-Frame-Options",
@@ -513,7 +510,7 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "674"
+							"value": "676"
 						},
 						{
 							"key": "X-Content-Type-Options",
@@ -529,7 +526,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"Items\": [\n        {\n            \"deviceModel\": \"/devicemodels/id1\",\n            \"note\": \"Testing a sensor.\",\n            \"id\": \"/devices/id1\",\n            \"name\": \"Sensor\",\n            \"serial\": \"A020000102\"\n        },\n        {\n            \"deviceModel\": \"/devicemodels/id2\",\n            \"note\": \"Testing a sensor.\",\n            \"id\": \"/devices/id2\",\n            \"name\": \"Sensor\",\n            \"serial\": \"A020000102\"\n        }\n    ],\n    \"Count\": 2,\n    \"ScannedCount\": 2,\n    \"ResponseMetadata\": {\n        \"RequestId\": \"PC0CAC4P5THO2E2872RLJOEU8JVV4KQNSO5AEMVJF66Q9ASUAAJG\",\n        \"HTTPStatusCode\": 200,\n        \"HTTPHeaders\": {\n            \"server\": \"Server\",\n            \"date\": \"Wed, 12 Jul 2023 09:48:49 GMT\",\n            \"content-type\": \"application/x-amz-json-1.0\",\n            \"content-length\": \"340\",\n            \"connection\": \"keep-alive\",\n            \"x-amzn-requestid\": \"PC0CAC4P5THO2E2872RLJOEU8JVV4KQNSO5AEMVJF66Q9ASUAAJG\",\n            \"x-amz-crc32\": \"1428308170\"\n        },\n        \"RetryAttempts\": 0\n    }\n}"
+					"body": "{\n    \"Items\": [\n        {\n            \"deviceModel\": \"/devicemodels/id5\",\n            \"note\": \"Testing a sensor5.\",\n            \"id\": \"/devices/id5\",\n            \"name\": \"Sensor5\",\n            \"serial\": \"A020000105\"\n        },\n        {\n            \"deviceModel\": \"/devicemodels/id2\",\n            \"note\": \"Testing a sensor.\",\n            \"id\": \"/devices/id2\",\n            \"name\": \"Sensor\",\n            \"serial\": \"A020000102\"\n        }\n    ],\n    \"Count\": 2,\n    \"ScannedCount\": 2,\n    \"ResponseMetadata\": {\n        \"RequestId\": \"0IEH9TE58APGV0DREF4S5BLOUJVV4KQNSO5AEMVJF66Q9ASUAAJG\",\n        \"HTTPStatusCode\": 200,\n        \"HTTPHeaders\": {\n            \"server\": \"Server\",\n            \"date\": \"Wed, 12 Jul 2023 09:59:22 GMT\",\n            \"content-type\": \"application/x-amz-json-1.0\",\n            \"content-length\": \"342\",\n            \"connection\": \"keep-alive\",\n            \"x-amzn-requestid\": \"0IEH9TE58APGV0DREF4S5BLOUJVV4KQNSO5AEMVJF66Q9ASUAAJG\",\n            \"x-amz-crc32\": \"1820926316\"\n        },\n        \"RetryAttempts\": 0\n    }\n}"
 				}
 			]
 		}
