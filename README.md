@@ -71,6 +71,9 @@ pip install -r requirements.txt
 
 Start the server
 
+```bas
+python manage.py migrate   
+```
 ```bash
 python manage.py runserver 
 ```
